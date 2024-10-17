@@ -1,0 +1,29 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, IntroText = "Tutorial", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+OrionLib:MakeNotification({
+	Name = "Activated",
+	Content = "Notification content... what will it say??",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Tab = Window:MakeTab({
+	Name = "Tab 1",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = TutTab:AddSection({
+	Name = "Tutorial Section"
+})
+Tab:AddToggle({
+	Name = "This is a toggle!",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+end 
+OrionLib:Init()
