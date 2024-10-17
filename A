@@ -17,7 +17,7 @@ local Tab = Window:MakeTab({
 local Section = TutTab:AddSection({
 	Name = "Tutorial Section"
 })
-Tab:AddToggle({
+TutTab:AddToggle({
 	Name = "This is a toggle!",
 	Default = false,
 	Callback = function(Value)
